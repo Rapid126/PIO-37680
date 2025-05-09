@@ -97,7 +97,7 @@ function renderCards(data) {
           <h4>${user.name}</h4>
           <p><strong>Email:</strong> ${user.email}</p>
           <p><strong>Miasto:</strong> ${user.address.city}</p>
-          <a class="btn details-btn" href="szczegoly.html" data-id="${user.id}">Szczegóły</a>
+          <a class="btn details-btn" href="Szczegoly.html" data-id="${user.id}">Szczegóły</a>
         </div>
       `).join('')}
     </div>
