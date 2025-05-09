@@ -1,0 +1,159 @@
+main {
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .user-list {
+    background-color: #0f141c;
+    border: 1px solid #1f2a3a;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1500px; 
+    height: auto;
+    margin: 40px auto;
+    overflow: auto;
+    box-sizing: border-box;
+  }
+  
+  .user-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ccc;
+  }
+  
+  #search {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #30363d;
+    text-align: left;
+  }
+  
+  th {
+    color: #bbb;
+  }
+  
+  .btn {
+    background-color: #012245;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    background-color: #161b22;
+    color: #fff;
+    border: 1px solid #30363d;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+@media (max-width: 1024px) {
+    table {
+      display: none;
+    }
+  
+    .user-list {
+      padding: 20px;
+    }
+  
+    .user-card-container {
+      display: grid;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .user-card {
+      background-color: #161b22;
+      padding: 15px;
+      border-radius: 6px;
+      border: 1px solid #30363d;
+    }
+  
+    .user-card h4 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+  
+    .user-card p {
+      margin: 5px 0;
+      color: #aaa;
+      font-size: 15px;
+    }
+  
+    .user-card button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    table {
+      display: none;
+    }
+  
+    .user-list {
+      padding: 10px;
+    }
+  
+    .user-card-container {
+      display: flex;
+      flex-direction: column; 
+      gap: 15px;
+    }
+  
+    .user-card {
+      background-color: #161b22;
+      padding: 15px;
+      border-radius: 6px;
+      border: 1px solid #30363d;
+    }
+  
+    .user-card h4 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+  
+    .user-card p {
+      margin: 5px 0;
+      color: #aaa;
+      font-size: 14px;
+    }
+  
+    .user-card button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+    
+  }
+  
+    .user-list {
+      padding: 20px;
+    }
+  

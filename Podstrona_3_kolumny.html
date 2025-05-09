@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Dawid Filipak</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="3kolumny.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="LogoDF.png" alt="Logo DF">
+    </div>
+    <nav>
+        <a href="Strona_główna.html">Strona główna</a>
+        <a href="Lista_danych.html">Lista danych</a>
+        <a href="Podstrona_3_kolumny.html">Podstrona z 3 kolumnami</a>
+        <a href="Kontakt.html">Kontakt</a>
+    </nav>
+    <div class="weather">
+      <span id="city-name">Tarnów:</span> 
+      <span id="temperature">Ładowanie...</span> 
+      <img id="weather-icon" src="Naglowek_tlo.png" alt="Ikona pogody pobierana z api"> 
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="column kolumna1">
+      <h2>Kolumna 1</h2>
+      <p>Treść kolumny 1.</p>
+    </div>
+    <div class="column kolumna2">
+      <h2>Kolumna 2</h2>
+      <p>Treść kolumny 2.</p>
+    </div>
+    <div class="column kolumna3">
+      <h2>Kolumna 3</h2>
+      <p>Treść kolumny 3.</p>
+    </div>
+  
+    <div class="column kolumna-mobile">
+      <h2>Wszystko razem</h2>
+      <p>Treść kolumny 1.</p>
+      <p>Treść kolumny 2.</p>
+      <p>Treść kolumny 3.</p>
+    </div>
+  </main>
+  
+
+  <footer>
+    <p>© 2025 Dawid Filipak~💻. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <script src="pogoda.js"></script>
+</body>
+</html>

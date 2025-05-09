@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f0f1a;
+  color: #e0e0e0;
+}
+
+.contact-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #0a0a14;
+}
+
+.form-box {
+  background-color: #15191F;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+  font-size: 2rem;
+  -webkit-text-stroke: 1px black;
+  text-stroke: 1px black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%; 
+}
+
+.row input {
+  flex: 1;
+  min-width: 250px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 1rem;
+  background-color: #1D2128;
+  border: 1px solid #333;
+  border-radius: 0.6rem;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+input::placeholder,
+textarea::placeholder,
+select {
+  color: #999;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.checkboxes input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #2980ff;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #2980ff;
+  border: none;
+  border-radius: 0.6rem;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #1668d8;
+}
+
+#success-message {
+  background-color: #1e2e1e;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #80ff95;
+  text-align: center;
+  font-size: 1rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 1024px) {
+  .form-box {
+      padding: 2rem;
+      max-width: 90%;
+  }
+
+  .form-box h2 {
+      font-size: 1.75rem;
+  }
+
+  input, textarea, select {
+      font-size: 1rem;
+      padding: 0.9rem;
+  }
+
+  button {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column;
+  }
+
+  .form-box h2 {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-box {
+      padding: 1.5rem;
+  }
+
+  input, textarea, select {
+      font-size: 0.95rem;
+      padding: 0.8rem;
+  }
+
+  button {
+      font-size: 1rem;
+      padding: 0.9rem;
+  }
+
+  .checkboxes label {
+      font-size: 0.95rem;
+  }
+
+  .row {
+      flex-direction: column;
+  }
+
+  .row input {
+      min-width: 100%; 
+  }
+}

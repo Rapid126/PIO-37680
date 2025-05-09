@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Dawid Filipak</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="Kontakt.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="LogoDF.png" alt="Logo DF">
+    </div>
+    <nav>
+        <a href="Strona_główna.html">Strona główna</a>
+        <a href="Lista_danych.html">Lista danych</a>
+        <a href="Podstrona_3_kolumny.html">Podstrona z 3 kolumnami</a>
+        <a href="Kontakt.html">Kontakt</a>
+    </nav>
+    <div class="weather">
+      <span id="city-name">Tarnów:</span> 
+      <span id="temperature">Ładowanie...</span> 
+      <img id="weather-icon" src="Naglowek_tlo.png" alt="Ikona pogody pobierana z api"> 
+    </div>
+  </header>
+
+
+    <main class="contact-main">
+      <section class="form-box">
+        <h2>Wypełnij formularz</h2>
+        <form>
+          <div class="row">
+            <input type="text" placeholder="Imię" required>
+            <input type="text" placeholder="Nazwisko" required>
+          </div>
+          <div class="row">
+            <input type="email" placeholder="E-mail" required>
+            <input type="text" placeholder="Nazwa firmy">
+          </div>
+          <div class="row">
+            <input type="tel" placeholder="Numer telefonu">
+            <input type="text" placeholder="Stanowisko">
+          </div>
+          <div class="full-width">
+            <select required>
+              <option value="" disabled selected hidden>Temat wiadomości</option>
+              <option value="współpraca">Współpraca</option>
+              <option value="wsparcie">Wsparcie techniczne</option>
+              <option value="inne">Inne</option>
+            </select>
+          </div>
+          <div class="full-width">
+            <textarea rows="5" placeholder="Treść wiadomości" required></textarea>
+          </div>
+          <div class="checkboxes">
+            <label><input type="checkbox" required> Zgadzam się na przetwarzanie danych osobowych.</label>
+            <label><input type="checkbox"> Chcę otrzymywać newsletter.</label>
+          </div>          
+          <button type="submit">Wyślij</button>
+        </form>
+        <div id="success-message" style="display: none; margin-top: 1rem; color: #4caf50; font-weight: bold;">
+          ✅ Wiadomość została wysłana!
+        </div>        
+      </section>
+    </main>
+    
+
+
+  <footer>
+    <p>© 2025 Dawid Filipak~💻. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <script src="pogoda.js"></script>
+  <script src="Kontakt.js"></script>
+</body>
+</html>

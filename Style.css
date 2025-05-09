@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #0f131a;
+    color: #fff;
+    text-shadow: 
+        1px 1px 0 black,  
+        -1px -1px 0 black,  
+        1px -1px 0 black,  
+        -1px 1px 0 black; 
+    line-height: 1.6;
+  }
+  
+  header {
+    background: url('Naglowek_tlo.png') no-repeat center center;
+    background-size: cover; 
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #1e1e1e;
+    width: 100%; 
+}
+
+  .logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  nav {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #c0c0c0;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid silver;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: silver;
+    color: #fff;
+}
+  
+  .weather {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  main {
+    display: flex;
+    background: url('tlo_main.png') no-repeat center center fixed;
+    background-size: cover; 
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 40px;
+    width: 100%; 
+    min-height: 100vh; 
+}
+ 
+  footer {
+    background: #0d0d0d;
+    height: 140px;
+    display: flex;
+    background: url('Stopka_tlo.png') no-repeat center center;
+    background-size: cover; 
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #333;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    width: 100%; 
+}
+img {
+    width: 97px;   
+    height: 65px;  
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 20px;
+    gap: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  header {
+    flex-wrap: wrap;
+    flex-direction: column; 
+    align-items: center;    
+  }
+  .logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  main {
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  footer {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  main {
+    padding: 30px 15px;
+  }
+
+  footer {
+    font-size: 16px;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  img {
+    width: 80px;
+    height: 55px;
+  }
+}

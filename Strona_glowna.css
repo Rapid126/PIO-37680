@@ -1,0 +1,113 @@
+.gora {
+    align-self: flex-end;
+    border-bottom: 2px solid #0A88FF;
+    padding-bottom: 30px;
+    width: 50%;
+    text-align: left;
+  }
+  .gora p {
+    font-size: 22px; 
+}
+  .gora h2 {
+    color: white;
+    font-size: 30px; 
+    font-size: px; 
+  text-shadow:
+    -1px -1px 0 #013CFF,
+     1px -1px 0 #013CFF,
+    -1px  1px 0 #013CFF,
+     1px  1px 0 #013CFF;
+
+    margin-bottom: 10px;
+  }
+  
+  .srodek {
+    align-self: flex-start;
+    border-bottom: 2px solid #0A88FF;
+    padding-bottom: 40px;
+    width: 50%;
+    text-align: left;
+  }
+  .srodek p {
+    font-size: 22px; 
+}
+
+  .srodek h2 {
+    color: white;
+    font-size: 30px; 
+  text-shadow:
+    -1px -1px 0 #013CFF,
+     1px -1px 0 #013CFF,
+    -1px  1px 0 #013CFF,
+     1px  1px 0 #013CFF;
+    margin-bottom: 10px;
+  }
+  
+  .code {
+    color: #ccc;
+    margin-right: 5px;
+  }
+  
+  .dol {
+    align-self: flex-end;
+    border-bottom: 2px solid #0A88FF;
+    padding-bottom: 40px;
+    width: 50%;
+    text-align: left;
+  }
+  .dol p {
+    font-size: 22px; 
+}
+
+  .dol h2 {
+    color: white;
+    font-size: 30px; 
+  text-shadow:
+    -1px -1px 0 #013CFF,
+     1px -1px 0 #013CFF,
+    -1px  1px 0 #013CFF,
+     1px  1px 0 #013CFF;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 1024px) {
+    .gora h2,
+    .srodek h2,
+    .dol h2 {
+        font-size: 26px;
+    }
+
+    .gora p,
+    .srodek p,
+    .dol p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gora h2,
+    .srodek h2,
+    .dol h2 {
+        font-size: 22px;
+    }
+
+    .gora p,
+    .srodek p,
+    .dol p {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .gora h2,
+    .srodek h2,
+    .dol h2 {
+        font-size: 18px;
+    }
+
+    .gora p,
+    .srodek p,
+    .dol p {
+        font-size: 16px;
+    }
+}
