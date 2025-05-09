@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Dawid Filipak.</title>
-  <link rel="stylesheet" href="Style.css">
-  <link rel="stylesheet" href="Szczegoly.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Dawid Filipak</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="Szczegoly.css">
 </head>
 <body>
-  <header>
+<header>
     <div class="logo">
         <img src="LogoDF.png" alt="Logo DF">
     </div>
@@ -19,13 +19,13 @@
         <a href="Kontakt.html">Kontakt</a>
     </nav>
     <div class="weather">
-      <span id="city-name">Tarnów:</span> 
-      <span id="temperature">Ładowanie...</span> 
-      <img id="weather-icon" src="Naglowek_tlo.png" alt="Ikona pogody pobierana z api"> 
+        <span id="city-name">Tarnów:</span>
+        <span id="temperature">Ładowanie...</span>
+        <img id="weather-icon" src="Naglowek_tlo.png" alt="Ikona pogody pobierana z api">
     </div>
-  </header>
+</header>
 
-  <main>
+<main>
     <div class="card">
         <button onclick="window.history.back()" class="back-btn">← Wróć</button>
         <h1>Szczegóły użytkownika</h1>
@@ -36,30 +36,30 @@
         <button class="edit-btn" onclick="editData()">Edytuj</button>
 
         <div id="edit-form" style="display: none;">
-          <h2>Edytuj dane użytkownika</h2>
-          <label for="edit-name">Imię i nazwisko:</label>
-          <input type="text" id="edit-name">
-          <br>
-          <label for="edit-email">Email:</label>
-          <input type="email" id="edit-email">
-          <br>
-          <label for="edit-city">Miasto:</label>
-          <input type="text" id="edit-city">
-          <br>
-          <label for="edit-company">Firma:</label>
-          <input type="text" id="edit-company">
-          <br>
-          <button id="save-button" onclick="saveData()">Zapisz</button>
-          <button id="cancel-button" onclick="cancelEdit()">Anuluj</button>
+            <h2>Edytuj dane użytkownika</h2>
+            <label for="edit-name">Imię i nazwisko:</label>
+            <input type="text" id="edit-name">
+            <br>
+            <label for="edit-email">Email:</label>
+            <input type="email" id="edit-email">
+            <br>
+            <label for="edit-city">Miasto:</label>
+            <input type="text" id="edit-city">
+            <br>
+            <label for="edit-company">Firma:</label>
+            <input type="text" id="edit-company">
+            <br>
+            <button id="save-button" onclick="saveData()">Zapisz</button>
+            <button id="cancel-button" onclick="cancelEdit()">Anuluj</button>
         </div>
     </div>
-  </main>
+</main>
 
-  <footer>
+<footer>
     <p>© 2025 Dawid Filipak~💻. Wszystkie prawa zastrzeżone.</p>
-  </footer>
+</footer>
 
-  <script src="Szczegoly.js"></script>
-  <script src="pogoda.js"></script>
+<script src="Szczegoly.js"></script>
+<script src="pogoda.js"></script>
 </body>
 </html>

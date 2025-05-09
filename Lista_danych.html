@@ -8,45 +8,42 @@
   <link rel="stylesheet" href="Lista_danych.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-        <img src="LogoDF.png" alt="Logo DF">
+<header>
+  <div class="logo">
+    <img src="LogoDF.png" alt="Logo DF">
+  </div>
+  <nav>
+    <a href="index.html">Strona główna</a>
+    <a href="Lista_danych.html">Lista danych</a>
+    <a href="Podstrona_3_kolumny.html">Podstrona z 3 kolumnami</a>
+    <a href="Kontakt.html">Kontakt</a>
+  </nav>
+  <div class="weather">
+    <span id="city-name">Tarnów:</span>
+    <span id="temperature">Ładowanie...</span>
+    <img id="weather-icon" src="Naglowek_tlo.png" alt="Ikona pogody pobierana z api">
+  </div>
+</header>
+
+<main>
+  <div class="user-list">
+    <h2>Lista użytkowników</h2>
+    <input type="text" id="search" placeholder="Szukaj..." />
+    <div id="user-container"></div>
+    <div class="pagination">
+      <button id="prev">«</button>
+      <span id="page-number">1</span>
+      <button id="next">»</button>
     </div>
-    <nav>
-        <a href="index.html">Strona główna</a>
-        <a href="Lista_danych.html">Lista danych</a>
-        <a href="Podstrona_3_kolumny.html">Podstrona z 3 kolumnami</a>
-        <a href="Kontakt.html">Kontakt</a>
-    </nav>
-    <div class="weather">
-      <span id="city-name">Tarnów:</span> 
-      <span id="temperature">Ładowanie...</span> 
-      <img id="weather-icon" src="Naglowek_tlo.png" alt="Ikona pogody pobierana z api"> 
-    </div>
-  </header>
+  </div>
+</main>
 
-  <main>
-    <main>
-      <div class="user-list">
-        <h2>Lista użytkowników</h2>
-        <input type="text" id="search" placeholder="Szukaj..." />
-        <div id="user-container"></div>
-        <div class="pagination">
-          <button id="prev">«</button>
-          <span id="page-number">1</span>
-          <button id="next">»</button>
-        </div>
-      </div>
-    </main>
-    
-    
-  </main>
+<footer>
+  <p>© 2025 Dawid Filipak~💻. Wszystkie prawa zastrzeżone.</p>
+</footer>
 
-  <footer>
-    <p>© 2025 Dawid Filipak~💻. Wszystkie prawa zastrzeżone.</p>
-  </footer>
-
-  <script src="pogoda.js"></script>
-  <script src="Lista_danych.js"></script>
+<!-- Załączamy pliki JS -->
+<script src="pogoda.js"></script>
+<script src="Lista_danych.js"></script>
 </body>
 </html>
