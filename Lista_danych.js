@@ -52,9 +52,9 @@ function renderUsers() {
   document.getElementById('page-number').textContent = currentPage;
 
   document.querySelectorAll('.details-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
       const userId = parseInt(btn.dataset.id);
-      showDetails(userId);
+      saveUserToLocalStorage(userId);
     });
   });
 }
@@ -79,7 +79,7 @@ function renderTable(data) {
             <td>${user.email}</td>
             <td>${user.address.city}</td>
             <td>
-              <button class="btn details-btn" data-id="${user.id}">Szczegóły</button>
+              <a class="btn details-btn" href="szczegoly.html" data-id="${user.id}">Szczegóły</a>
             </td>
           </tr>
         `).join('')}
@@ -97,18 +97,17 @@ function renderCards(data) {
           <h4>${user.name}</h4>
           <p><strong>Email:</strong> ${user.email}</p>
           <p><strong>Miasto:</strong> ${user.address.city}</p>
-          <button class="btn details-btn" data-id="${user.id}">Szczegóły</button>
+          <a class="btn details-btn" href="szczegoly.html" data-id="${user.id}">Szczegóły</a>
         </div>
       `).join('')}
     </div>
   `;
 }
 
-function showDetails(userId) {
+function saveUserToLocalStorage(userId) {
   const selected = users.find(u => u.id === userId);
   if (selected) {
     localStorage.setItem('selectedUser', JSON.stringify(selected));
-    window.location.href = './szczegoly.html'; // <--- poprawiona ścieżka
   }
 }
 
