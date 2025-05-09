@@ -51,10 +51,17 @@ function renderUsers() {
 
   document.getElementById('page-number').textContent = currentPage;
 
+  // Dodajemy poprawiony listener
   document.querySelectorAll('.details-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
+      e.preventDefault(); // Zatrzymujemy domyślne przejście
       const userId = parseInt(btn.dataset.id);
       saveUserToLocalStorage(userId);
+
+      // Przechodzimy po krótkim opóźnieniu
+      setTimeout(() => {
+        window.location.href = btn.href;
+      }, 100);
     });
   });
 }
@@ -79,7 +86,7 @@ function renderTable(data) {
             <td>${user.email}</td>
             <td>${user.address.city}</td>
             <td>
-              <a class="btn details-btn" href="szczegoly.html" data-id="${user.id}">Szczegóły</a>
+              <a class="btn details-btn" href="Szczegoly.html" data-id="${user.id}">Szczegóły</a>
             </td>
           </tr>
         `).join('')}
