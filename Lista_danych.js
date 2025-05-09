@@ -7,7 +7,6 @@ async function fetchUsers() {
   const res = await fetch(API_URL);
   const data = await res.json();
 
-  users = [];
   const cityList = [
     "Warszawa", "Kraków", "Wrocław", "Poznań", "Gdańsk",
     "Łódź", "Lublin", "Rzeszów", "Szczecin", "Katowice"
@@ -51,17 +50,15 @@ function renderUsers() {
 
   document.getElementById('page-number').textContent = currentPage;
 
-  // Dodajemy poprawiony listener
   document.querySelectorAll('.details-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
-      e.preventDefault(); // Zatrzymujemy domyślne przejście
+      e.preventDefault(); // zatrzymaj domyślne działanie linku
       const userId = parseInt(btn.dataset.id);
-      saveUserToLocalStorage(userId);
-
-      // Przechodzimy po krótkim opóźnieniu
-      setTimeout(() => {
-        window.location.href = btn.href;
-      }, 100);
+      const selected = users.find(u => u.id === userId);
+      if (selected) {
+        localStorage.setItem('selectedUser', JSON.stringify(selected));
+        window.location.href = 'Szczegoly.html'; // upewnij się że plik nazywa się dokładnie tak
+      }
     });
   });
 }
@@ -86,7 +83,7 @@ function renderTable(data) {
             <td>${user.email}</td>
             <td>${user.address.city}</td>
             <td>
-              <a class="btn details-btn" href="Szczegoly.html" data-id="${user.id}">Szczegóły</a>
+              <a class="btn details-btn" href="#" data-id="${user.id}">Szczegóły</a>
             </td>
           </tr>
         `).join('')}
@@ -104,18 +101,11 @@ function renderCards(data) {
           <h4>${user.name}</h4>
           <p><strong>Email:</strong> ${user.email}</p>
           <p><strong>Miasto:</strong> ${user.address.city}</p>
-          <a class="btn details-btn" href="Szczegoly.html" data-id="${user.id}">Szczegóły</a>
+          <a class="btn details-btn" href="#" data-id="${user.id}">Szczegóły</a>
         </div>
       `).join('')}
     </div>
   `;
-}
-
-function saveUserToLocalStorage(userId) {
-  const selected = users.find(u => u.id === userId);
-  if (selected) {
-    localStorage.setItem('selectedUser', JSON.stringify(selected));
-  }
 }
 
 document.getElementById('search').addEventListener('input', () => {
@@ -141,5 +131,4 @@ document.getElementById('next').addEventListener('click', () => {
 });
 
 window.addEventListener('resize', renderUsers);
-
 fetchUsers();
