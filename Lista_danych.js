@@ -36,7 +36,7 @@ function renderUsers() {
 
   const searchTerm = document.getElementById('search').value.toLowerCase();
   const filteredUsers = users.filter(user =>
-    user.name.toLowerCase().includes(searchTerm)
+      user.name.toLowerCase().includes(searchTerm)
   );
 
   const paginated = filteredUsers.slice(start, end);
@@ -108,7 +108,7 @@ function showDetails(userId) {
   const selected = users.find(u => u.id === userId);
   if (selected) {
     localStorage.setItem('selectedUser', JSON.stringify(selected));
-    window.location.href = 'szczegoly.html';
+    window.location.href = './szczegoly.html'; // <--- poprawiona ścieżka
   }
 }
 
@@ -126,7 +126,7 @@ document.getElementById('prev').addEventListener('click', () => {
 
 document.getElementById('next').addEventListener('click', () => {
   const filtered = users.filter(user =>
-    user.name.toLowerCase().includes(document.getElementById('search').value.toLowerCase())
+      user.name.toLowerCase().includes(document.getElementById('search').value.toLowerCase())
   );
   if (currentPage * usersPerPage < filtered.length) {
     currentPage++;
