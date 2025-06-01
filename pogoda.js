@@ -1,5 +1,5 @@
-const apiKey = '50842ebd5c0ca395148db685030e547b'; 
-const city = 'Tarnów'; 
+const apiKey = '50842ebd5c0ca395148db685030e547b';
+const city = 'Tarnów';
 
 async function fetchWeather() {
   try {
@@ -7,7 +7,7 @@ async function fetchWeather() {
     const data = await response.json();
 
     if (data.cod === 200) {
-      const temperature = data.main.temp;
+      const temperature = Math.round(data.main.temp);
       const weatherIcon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
       const weatherDescription = data.weather[0].description;
 
