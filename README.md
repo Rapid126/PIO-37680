@@ -94,7 +94,4 @@ Strona portfolio stworzona jako projekt prezentujący umiejętności frontendowe
 1. Sklonuj repozytorium lub pobierz pliki jako ZIP.
 2. Upewnij się, że wszystkie pliki są w tym samym folderze (lub zgodnie z wyżej podaną strukturą).
 3. Otwórz `index.html` w przeglądarce.
-4. Aby testować JS (np. dane użytkowników), możesz uruchomić prosty serwer lokalny np.:
 
-   ```bash
-   npx http-server .
